@@ -3,7 +3,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('gerar_csv/<int:id>/', views.gerar_csv, name="gerar_csv"),
+    path('gerar_csv/<int:id>/', views.gerar_csv, name='gerar_csv'),
     path('gerenciar_evento/', views.gerenciar_evento, name='gerenciar_evento'),
     path(
         'inscrever_evento/<int:id>/',
