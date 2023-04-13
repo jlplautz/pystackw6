@@ -27,6 +27,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install poetry
         
+    - name: Install dependencias do projeto
+      run: poetry install --without doc  # sem o grupo de dependencia doc
+        
     - name: Run Tests
       run: poetry run task test --cov-report=xml
       
