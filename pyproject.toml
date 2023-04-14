@@ -16,10 +16,21 @@ pytest-cov = "^4.0.0"
 blue = "^0.9.1"
 isort = "^5.12.0"
 taskipy = "^1.10.4"
+pytest-django = "^4.5.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+python_files = [
+    "test*.py",
+    "*tests.py",
+]
+minversion = "6.0"
+addopts = "-ra -q -v"
+# testpaths = ["srcprg/tests",]
+DJANGO_SETTINGS_MODULE = "srcprg.settings"
 
 [tool.isort]
 profile = "black"
@@ -28,5 +39,5 @@ line_length = 79
 [tool.taskipy.tasks]
 lint = "blue --check --diff . && isort --check --diff ."
 pre_test = "task lint"
-test = "pytest -s -x --cov=pystackw6 -vv"
+test = "pytest -s -x --cov=srcprg -vv"
 post_test = "coverage html"
