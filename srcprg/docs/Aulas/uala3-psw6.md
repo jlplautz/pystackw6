@@ -203,7 +203,7 @@ def procurar_certificado(request, id):
 
 ## Clientes
 
-### ### Crie um APP para clientes e faça a instalação!
+### Crie um APP para clientes e faça a instalação!
 
 ### Crie uma URL para o APP:
 
